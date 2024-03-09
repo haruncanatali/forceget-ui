@@ -1,0 +1,63 @@
+<h2 class="text-center mt-5">Create Offer Page</h2>
+<div style="padding: 6em;">
+    <form name="#myForm" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+            <label for="modeType" class="form-label">Mode</label>
+            <select class="form-select" name="modeType" [(ngModel)] = "modeType">
+                <option *ngFor="let option of modeTypes" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="movementType" class="form-label">Movement Type</label>
+            <select class="form-select" name="movementType" [(ngModel)] = "movementType">
+                <option *ngFor="let option of movementTypes" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="incotermsType" class="form-label">Incoterms</label>
+            <select class="form-select" name="incotermsType" [(ngModel)] = "incotermsType">
+                <option *ngFor="let option of incotermsTypes" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="countryId" class="form-label">Country</label>
+            <select (change)="onCountryChange()" class="form-select" name="countryId" [(ngModel)] = "countryId">
+                <option *ngFor="let option of countries" [value]="option.id">{{ option.name }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="cityId" class="form-label">City</label>
+            <select class="form-select" name="cityId" [(ngModel)] = "cityId">
+                <option *ngFor="let option of cities" [value]="option.id">{{ option.name }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="packageType" class="form-label">Package Type</label>
+            <select class="form-select" name="packageType" [(ngModel)] = "packageType">
+                <option *ngFor="let option of packageTypes" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="unit1Type" class="form-label">Unit - 1</label>
+            <select class="form-select" name="unit1Type" [(ngModel)] = "unit1Type">
+                <option *ngFor="let option of unit1Types" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="unit2Type" class="form-label">Unit - 2</label>
+            <select class="form-select" name="unit1Type" [(ngModel)] = "unit2Type">
+                <option *ngFor="let option of unit2Types" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="currencyType" class="form-label">Unit - 2</label>
+            <select class="form-select" name="currencyType" [(ngModel)] = "currencyType">
+                <option *ngFor="let option of currencyTypes" [value]="option.value">{{ option.label }}</option>
+            </select>
+        </div>
+    
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+    
